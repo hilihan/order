@@ -74,4 +74,15 @@ public class ProductCategory {
         this.categoryName = categoryName;
         this.categoryType = categoryType;
     }
+
+    @Override
+    public String toString() {
+        return "ProductCategory{" +
+                "categoryId=" + categoryId +
+                ", categoryName='" + categoryName + '\'' +
+                ", categoryType=" + categoryType +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
+    }
 }
