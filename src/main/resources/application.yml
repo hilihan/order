@@ -8,3 +8,6 @@ spring:
     url: jdbc:mysql://10.0.3.54/sell?characterEncoding=utf8&useSSL=false
   jpa:
     show-sql: true
+#项目访问名
+server:
+  context-path: /sell
