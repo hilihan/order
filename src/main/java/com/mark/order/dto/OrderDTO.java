@@ -1,21 +1,16 @@
-package com.mark.order.dataobject;
+package com.mark.order.dto;
 
-import com.mark.order.enums.OrderStatusEnum;
-import com.mark.order.enums.PayStatusEnum;
+import com.mark.order.dataobject.OrderDetail;
 import lombok.Data;
-import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
-@Entity
 @Data
-@DynamicUpdate
-public class OrderMaster {
+public class OrderDTO {
+
     /** 订单ID */
-    @Id
     private String orderId;
     /** 买家名字 */
     private String buyerName;
@@ -28,13 +23,13 @@ public class OrderMaster {
     /** 订单总金额 */
     private BigDecimal orderAmount;
     /** 订单状态，默认为 0 新下单 */
-    private Integer orderStatus = OrderStatusEnum.NEW.getCode();
+    private Integer orderStatus;
     /** 支付状态，默认为 0 未支付 */
-    private Integer payStatus = PayStatusEnum.WAIT.getCode();
+    private Integer payStatus;
 
     private Date createTime;
     private Date updateTime;
 
-
+    List<OrderDetail> orderDetailList;
 
 }
