@@ -19,15 +19,15 @@ public class OrderMasterRepositoryTest {
     @Autowired
     private OrderMasterRepository repository;
 
-    private final String OPEN_ID = "110110";
+    private final String OPEN_ID = "888888";
 
     @Test
     public void saveTest(){
         OrderMaster orderMaster = new OrderMaster();
         orderMaster.setOrderId("123457");
         orderMaster.setBuyerName("Mark");
-        orderMaster.setBuyerPhone("17767205017");
-        orderMaster.setBuyerAddress("又拍云");
+        orderMaster.setBuyerPhone("12345678901");
+        orderMaster.setBuyerAddress("李家山");
         orderMaster.setBuyerOpenid(OPEN_ID);
         orderMaster.setOrderAmount(new BigDecimal(2.5));
 
